@@ -1,0 +1,7 @@
+.idea
+secret.properties
+build
+gradle
+gradlew
+.gradle
+gradlew.bat

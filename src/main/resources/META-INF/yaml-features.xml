@@ -1,0 +1,7 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.intellij">
+        <psi.referenceContributor language="yaml"
+            implementation="com.davidprihoda.dvc.DvcReferenceContributor"/>
+        <!--<annotator language="yaml" implementationClass="com.davidprihoda.dvc.DvcAnnotator" />-->
+    </extensions>
+</idea-plugin>

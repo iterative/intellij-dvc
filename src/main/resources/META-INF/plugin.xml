@@ -1,0 +1,15 @@
+<idea-plugin>
+    <id>com.davidprihoda.dvc</id>
+    <name>dvc-support-poc</name>
+    <description>DVC file support proof of concept.</description>
+    <vendor email="david.prihoda@gmail.com" url="http://davidprihoda.com">David Příhoda</vendor>
+
+    <idea-version since-build="171" />
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <depends optional="true" config-file="yaml-features.xml">org.jetbrains.plugins.yaml</depends>
+
+</idea-plugin>
