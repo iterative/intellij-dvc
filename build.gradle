@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'com.davidprihoda.dvc'
-version '0.0.3'
+version '0.0.4'
 
 apply plugin: 'org.jetbrains.intellij'
 apply plugin: 'idea'
@@ -11,18 +11,17 @@ apply from: 'secret.properties'
 
 sourceCompatibility = 1.8
 
+repositories {
+    mavenCentral()
+}
+
 intellij {
-    plugins 'yaml'
+    plugins 'yaml', 'BashSupport'
     version '2017.2'
     pluginName 'dvc-support-poc'
     intellij.updateSinceUntilBuild false //Disables updating since-build attribute in plugin.xml
-
 }
 publishPlugin {
-}
-
-repositories {
-    mavenCentral()
 }
 
 dependencies {

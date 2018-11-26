@@ -1,0 +1,5 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.intellij">
+        <languageInjector implementation="com.davidprihoda.dvc.DvcCommandLanguageInjector" />
+    </extensions>
+</idea-plugin>
