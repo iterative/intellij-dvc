@@ -1,7 +1,18 @@
 <idea-plugin>
     <id>com.davidprihoda.dvc</id>
     <name>dvc-support-poc</name>
-    <description>DVC file support proof of concept.</description>
+    <description><![CDATA[
+        <p>Data Version Control (DVC) file support.</p>
+        <br/>
+        <p>See <a href="http://dvc.org">DVC Website</a> and <a href="https://github.com/iterative/dvc">DVC Github</a>.</p>
+        <br/>
+        <b>Features:</b>
+        <ul>
+            <li>Click-through file references for dependencies and outputs</li>
+            <li>DVC file syntax highlighting (YAML)</li>
+            <li>DVC file icon</li>
+        </ul>
+        ]]></description>
     <vendor email="david.prihoda@gmail.com" url="http://davidprihoda.com">David Příhoda</vendor>
 
     <idea-version since-build="171" />
