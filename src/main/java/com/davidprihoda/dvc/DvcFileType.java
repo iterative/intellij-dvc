@@ -26,7 +26,7 @@ public class DvcFileType extends LanguageFileType {
 
 	@NotNull
 	public String getDescription() {
-		return "DVC file";
+		return "Data Version Control (DVC) file";
 	}
 
 	@NotNull

@@ -8,7 +8,7 @@
         <br/>
         <b>Features:</b>
         <ul>
-            <li>Click-through file references for dependencies and outputs</li>
+            <li>Click-through file references for dependencies and outputs (ctrl+click)</li>
             <li>DVC file syntax highlighting (YAML)</li>
             <li>DVC file icon</li>
         </ul>
