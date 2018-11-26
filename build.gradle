@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'com.davidprihoda.dvc'
-version '0.0.2'
+version '0.0.3-SNAPSHOT'
 
 apply plugin: 'org.jetbrains.intellij'
 apply plugin: 'idea'
@@ -19,7 +19,6 @@ intellij {
 
 }
 publishPlugin {
-    channels 'alpha'
 }
 
 repositories {

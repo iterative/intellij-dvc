@@ -6,10 +6,13 @@
 
     <idea-version since-build="171" />
     <depends>com.intellij.modules.lang</depends>
+    <depends>org.jetbrains.plugins.yaml</depends>
 
     <extensions defaultExtensionNs="com.intellij">
+        <fileTypeFactory implementation="com.davidprihoda.dvc.DvcFileTypeFactory"/>
+        <psi.referenceContributor language="yaml"
+                                  implementation="com.davidprihoda.dvc.DvcReferenceContributor"/>
     </extensions>
 
-    <depends optional="true" config-file="yaml-features.xml">org.jetbrains.plugins.yaml</depends>
 
 </idea-plugin>
