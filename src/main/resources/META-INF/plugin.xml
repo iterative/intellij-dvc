@@ -1,10 +1,12 @@
 <idea-plugin>
     <id>com.davidprihoda.dvc</id>
-    <name>dvc-support-poc</name>
+    <name>Data Version Control (DVC) Support</name>
     <description><![CDATA[
         <p>Data Version Control (DVC) file support.</p>
         <br/>
-        <p>See <a href="http://dvc.org">DVC Website</a> and <a href="https://github.com/iterative/dvc">DVC Github</a>.</p>
+        <p>Contribute: <a href="https://github.com/iterative/intellij-dvc">https://github.com/iterative/intellij-dvc</a></p>
+        <br/>
+        <p>For more about DVC see the <a href="http://dvc.org">DVC Website</a> or <a href="https://github.com/iterative/dvc">DVC GitHub</a>.</p>
         <br/>
         <b>Features:</b>
         <ul>
@@ -16,7 +18,7 @@
             <li>DVC file icon</li>
         </ul>
         ]]></description>
-    <vendor email="david.prihoda@gmail.com" url="http://davidprihoda.com">David Příhoda</vendor>
+    <vendor email="prihoda@iterative.ai" url="http://dvc.org">David Příhoda</vendor>
 
     <idea-version since-build="171" />
     <depends>com.intellij.modules.lang</depends>

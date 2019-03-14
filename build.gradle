@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'com.davidprihoda.dvc'
-version '0.0.4'
+version '0.0.5'
 
 apply plugin: 'org.jetbrains.intellij'
 apply plugin: 'idea'
@@ -16,9 +16,9 @@ repositories {
 }
 
 intellij {
-    plugins 'yaml', 'BashSupport'
+    plugins 'yaml', 'BashSupport:1.7.3'
     version '2017.2'
-    pluginName 'dvc-support-poc'
+    pluginName 'Data Version Control (DVC) Support'
     intellij.updateSinceUntilBuild false //Disables updating since-build attribute in plugin.xml
 }
 publishPlugin {
