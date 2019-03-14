@@ -1,6 +1,7 @@
 package com.davidprihoda.dvc;
 
 import com.ansorgit.plugins.bash.file.BashFileType;
+import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.util.TextRange;
 import com.intellij.psi.ElementManipulators;
 import com.intellij.psi.InjectedLanguagePlaces;
@@ -8,8 +9,6 @@ import com.intellij.psi.LanguageInjector;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiLanguageInjectionHost;
 import org.jetbrains.annotations.NotNull;
-import com.intellij.openapi.diagnostic.Logger;
-import org.jetbrains.yaml.psi.impl.YAMLCompoundValueImpl;
 import org.jetbrains.yaml.psi.impl.YAMLKeyValueImpl;
 
 public class DvcCommandLanguageInjector implements LanguageInjector {

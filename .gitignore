@@ -1,5 +1,6 @@
 .idea
 secret.properties
+out
 build
 gradle
 gradlew

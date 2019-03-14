@@ -29,6 +29,8 @@
         <fileTypeFactory implementation="com.davidprihoda.dvc.DvcFileTypeFactory"/>
         <psi.referenceContributor language="yaml"
                                   implementation="com.davidprihoda.dvc.DvcReferenceContributor"/>
+        <applicationService serviceImplementation="com.davidprihoda.dvc.DvcApplicationState"/>
+        <applicationConfigurable instance="com.davidprihoda.dvc.DvcApplicationConfiguration"></applicationConfigurable>
     </extensions>
 
 
