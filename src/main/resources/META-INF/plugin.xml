@@ -29,6 +29,7 @@
         <fileTypeFactory implementation="com.davidprihoda.dvc.DvcFileTypeFactory"/>
         <psi.referenceContributor language="yaml"
                                   implementation="com.davidprihoda.dvc.DvcReferenceContributor"/>
+        <toolWindow id="DVC structure" icon="/icons/DVC.png" anchor="right" factoryClass="com.davidprihoda.dvc.structure.DvcStructureToolWindowFactory"/>
     </extensions>
 
 
