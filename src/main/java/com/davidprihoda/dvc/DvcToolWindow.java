@@ -34,6 +34,7 @@ public class DvcToolWindow {
 
     public void bind(ToolRunner toolRunner, Content content) {
         this.content = content;
+        insertText(String.join(" ", toolRunner.getCommandLine()));
 
         toolRunner.addListener(new ToolRunner.Listener() {
             @Override
