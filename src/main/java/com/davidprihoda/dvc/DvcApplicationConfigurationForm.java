@@ -1,5 +1,9 @@
 package com.davidprihoda.dvc;
 
+import com.intellij.openapi.fileChooser.FileChooser;
+import com.intellij.openapi.fileChooser.FileChooserDescriptor;
+import com.intellij.openapi.vfs.VirtualFile;
+
 import javax.swing.*;
 
 public class DvcApplicationConfigurationForm {
@@ -16,13 +20,11 @@ public class DvcApplicationConfigurationForm {
     }
 
     public void browseForDvcHome() {
-        JFileChooser fc = new JFileChooser();
-        fc.setDialogTitle("Browse for DVC Home Directory");
-        fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
-        fc.setMultiSelectionEnabled(false);
-        int result = fc.showOpenDialog(dvcExecutableBrowseButton);
-        if (result == JFileChooser.APPROVE_OPTION) {
-            setDvcExecutable(fc.getSelectedFile().getAbsolutePath());
+        VirtualFile virtualFile = FileChooser.chooseFile(
+                new FileChooserDescriptor(true, false, false, false, false, false),
+                null, null);
+        if (virtualFile != null) {
+            setDvcExecutable(virtualFile.getPath());
         }
     }
 
