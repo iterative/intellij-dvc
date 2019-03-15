@@ -1,3 +1,4 @@
+
 plugins {
     id "org.jetbrains.intellij" version "0.3.12"
 }
@@ -20,7 +21,9 @@ intellij {
     version '2017.2'
     pluginName 'Data Version Control (DVC) Support'
     intellij.updateSinceUntilBuild false //Disables updating since-build attribute in plugin.xml
+    sandboxDirectory = "$project.buildDir/ide-sandbox"
 }
+
 publishPlugin {
 }
 

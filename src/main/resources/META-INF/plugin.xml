@@ -1,4 +1,5 @@
 <idea-plugin>
+
     <id>com.davidprihoda.dvc</id>
     <name>Data Version Control (DVC) Support</name>
     <description><![CDATA[
@@ -25,11 +26,33 @@
     <depends>org.jetbrains.plugins.yaml</depends>
     <depends optional="true" config-file="bash-features.xml">BashSupport</depends>
 
+    <actions>
+        <group id="DvcActionGroup" popup="true" icon="/icons/DVC.png" text="DVC" class="com.davidprihoda.dvc.DvcActionGroup">
+            <add-to-group group-id="VcsGroups" anchor="last"/>
+            <!--<add-to-group group-id="VcsGroup" anchor="last"/>-->
+            <!-- because VcsGroup does not work -->
+            <add-to-group group-id="CutCopyPasteGroup" anchor="last"/>
+        </group>
+
+        <action id="DvcStatusFileAction" text="Status" class="com.davidprihoda.dvc.DvcStatusFileAction">
+            <add-to-group group-id="DvcActionGroup"/>
+        </action>
+        <action id="DvcPullFileAction" text="Pull" class="com.davidprihoda.dvc.DvcPullFileAction">
+            <add-to-group group-id="DvcActionGroup"/>
+        </action>
+        <action id="DvcPushFileAction" text="Push" class="com.davidprihoda.dvc.DvcPushFileAction">
+            <add-to-group group-id="DvcActionGroup"/>
+        </action>
+    </actions>
+
     <extensions defaultExtensionNs="com.intellij">
         <fileTypeFactory implementation="com.davidprihoda.dvc.DvcFileTypeFactory"/>
         <psi.referenceContributor language="yaml"
                                   implementation="com.davidprihoda.dvc.DvcReferenceContributor"/>
+        <applicationService serviceImplementation="com.davidprihoda.dvc.DvcApplicationState"/>
+        <applicationConfigurable instance="com.davidprihoda.dvc.DvcApplicationConfiguration"/>
+        <applicationService serviceImplementation="com.davidprihoda.dvc.DvcToolWindowFactory"/>
+        <toolWindow id="DVC Output" anchor="bottom" icon="/icons/DVC.png" canCloseContents="true" factoryClass="com.davidprihoda.dvc.DvcToolWindowFactory"/>
     </extensions>
-
 
 </idea-plugin>
