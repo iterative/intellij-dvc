@@ -24,12 +24,17 @@ public abstract class DvcFileAction extends DumbAwareAction {
         Project project = event.getProject();
         final VirtualFile[] virtualFiles = CommonDataKeys.VIRTUAL_FILE_ARRAY.getData(dataContext);
         if (isEnabled(project, virtualFiles)) {
-            List<String> filePaths = convertFilesToArguments(virtualFiles);
-            DvcUtils.runTool(event.getProject(), action, filePaths);
+            List<String> options = askForActionOptions(project);
+            if (options != null) {
+                List<String> filePaths = convertFilesToTargetArguments(virtualFiles);
+                DvcUtils.runTool(event.getProject(), action, options, filePaths);
+            }
         }
     }
 
-    private static List<String> convertFilesToArguments(VirtualFile[] virtualFiles) {
+    protected abstract List<String> askForActionOptions(Project project);
+
+    private static List<String> convertFilesToTargetArguments(VirtualFile[] virtualFiles) {
         List<String> paths = new ArrayList<>();
         for (VirtualFile virtualFile : virtualFiles) {
             String extension = virtualFile.getExtension();
