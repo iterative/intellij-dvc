@@ -37,7 +37,7 @@
         <action id="DvcStatusFileAction" text="Status" class="com.davidprihoda.dvc.DvcStatusFileAction">
             <add-to-group group-id="DvcActionGroup"/>
         </action>
-        <action id="DvcPullFileAction" text="Pull" class="com.davidprihoda.dvc.DvcPullFileAction">
+        <action id="DvcPullFileAction" text="Pull..." class="com.davidprihoda.dvc.DvcPullFileAction">
             <add-to-group group-id="DvcActionGroup"/>
         </action>
         <action id="DvcPushFileAction" text="Push" class="com.davidprihoda.dvc.DvcPushFileAction">
